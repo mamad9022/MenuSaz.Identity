@@ -1,0 +1,12 @@
+D:\Project\MenuSaz.Identity\MenuSaz.Identity.Domain\bin\Debug\net6.0\MenuSaz.Identity.Domain.deps.json
+D:\Project\MenuSaz.Identity\MenuSaz.Identity.Domain\bin\Debug\net6.0\MenuSaz.Identity.Domain.dll
+D:\Project\MenuSaz.Identity\MenuSaz.Identity.Domain\bin\Debug\net6.0\MenuSaz.Identity.Domain.pdb
+D:\Project\MenuSaz.Identity\MenuSaz.Identity.Domain\obj\Debug\net6.0\MenuSaz.Identity.Domain.csproj.AssemblyReference.cache
+D:\Project\MenuSaz.Identity\MenuSaz.Identity.Domain\obj\Debug\net6.0\MenuSaz.Identity.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project\MenuSaz.Identity\MenuSaz.Identity.Domain\obj\Debug\net6.0\MenuSaz.Identity.Domain.AssemblyInfoInputs.cache
+D:\Project\MenuSaz.Identity\MenuSaz.Identity.Domain\obj\Debug\net6.0\MenuSaz.Identity.Domain.AssemblyInfo.cs
+D:\Project\MenuSaz.Identity\MenuSaz.Identity.Domain\obj\Debug\net6.0\MenuSaz.Identity.Domain.csproj.CoreCompileInputs.cache
+D:\Project\MenuSaz.Identity\MenuSaz.Identity.Domain\obj\Debug\net6.0\MenuSaz.Identity.Domain.dll
+D:\Project\MenuSaz.Identity\MenuSaz.Identity.Domain\obj\Debug\net6.0\refint\MenuSaz.Identity.Domain.dll
+D:\Project\MenuSaz.Identity\MenuSaz.Identity.Domain\obj\Debug\net6.0\MenuSaz.Identity.Domain.pdb
+D:\Project\MenuSaz.Identity\MenuSaz.Identity.Domain\obj\Debug\net6.0\ref\MenuSaz.Identity.Domain.dll

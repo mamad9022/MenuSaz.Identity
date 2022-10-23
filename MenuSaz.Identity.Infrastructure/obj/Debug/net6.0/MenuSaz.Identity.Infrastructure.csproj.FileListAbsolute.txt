@@ -1,0 +1,12 @@
+D:\Project\MenuSaz.Identity\MenuSaz.Identity.Infrastructure\bin\Debug\net6.0\MenuSaz.Identity.Infrastructure.deps.json
+D:\Project\MenuSaz.Identity\MenuSaz.Identity.Infrastructure\bin\Debug\net6.0\MenuSaz.Identity.Infrastructure.dll
+D:\Project\MenuSaz.Identity\MenuSaz.Identity.Infrastructure\bin\Debug\net6.0\MenuSaz.Identity.Infrastructure.pdb
+D:\Project\MenuSaz.Identity\MenuSaz.Identity.Infrastructure\obj\Debug\net6.0\MenuSaz.Identity.Infrastructure.csproj.AssemblyReference.cache
+D:\Project\MenuSaz.Identity\MenuSaz.Identity.Infrastructure\obj\Debug\net6.0\MenuSaz.Identity.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project\MenuSaz.Identity\MenuSaz.Identity.Infrastructure\obj\Debug\net6.0\MenuSaz.Identity.Infrastructure.AssemblyInfoInputs.cache
+D:\Project\MenuSaz.Identity\MenuSaz.Identity.Infrastructure\obj\Debug\net6.0\MenuSaz.Identity.Infrastructure.AssemblyInfo.cs
+D:\Project\MenuSaz.Identity\MenuSaz.Identity.Infrastructure\obj\Debug\net6.0\MenuSaz.Identity.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Project\MenuSaz.Identity\MenuSaz.Identity.Infrastructure\obj\Debug\net6.0\MenuSaz.Identity.Infrastructure.dll
+D:\Project\MenuSaz.Identity\MenuSaz.Identity.Infrastructure\obj\Debug\net6.0\refint\MenuSaz.Identity.Infrastructure.dll
+D:\Project\MenuSaz.Identity\MenuSaz.Identity.Infrastructure\obj\Debug\net6.0\MenuSaz.Identity.Infrastructure.pdb
+D:\Project\MenuSaz.Identity\MenuSaz.Identity.Infrastructure\obj\Debug\net6.0\ref\MenuSaz.Identity.Infrastructure.dll
