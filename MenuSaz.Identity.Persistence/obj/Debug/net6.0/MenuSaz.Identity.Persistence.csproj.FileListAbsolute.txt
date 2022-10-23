@@ -1,0 +1,17 @@
+D:\Project\MenuSaz.Identity\MenuSaz.Identity.Persistence\bin\Debug\net6.0\MenuSaz.Identity.Persistence.deps.json
+D:\Project\MenuSaz.Identity\MenuSaz.Identity.Persistence\bin\Debug\net6.0\MenuSaz.Identity.Persistence.runtimeconfig.json
+D:\Project\MenuSaz.Identity\MenuSaz.Identity.Persistence\bin\Debug\net6.0\MenuSaz.Identity.Persistence.dll
+D:\Project\MenuSaz.Identity\MenuSaz.Identity.Persistence\bin\Debug\net6.0\MenuSaz.Identity.Persistence.pdb
+D:\Project\MenuSaz.Identity\MenuSaz.Identity.Persistence\bin\Debug\net6.0\MenuSaz.Identity.Domain.dll
+D:\Project\MenuSaz.Identity\MenuSaz.Identity.Persistence\bin\Debug\net6.0\MenuSaz.Identity.Domain.pdb
+D:\Project\MenuSaz.Identity\MenuSaz.Identity.Persistence\obj\Debug\net6.0\MenuSaz.Identity.Persistence.csproj.AssemblyReference.cache
+D:\Project\MenuSaz.Identity\MenuSaz.Identity.Persistence\obj\Debug\net6.0\MenuSaz.Identity.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project\MenuSaz.Identity\MenuSaz.Identity.Persistence\obj\Debug\net6.0\MenuSaz.Identity.Persistence.AssemblyInfoInputs.cache
+D:\Project\MenuSaz.Identity\MenuSaz.Identity.Persistence\obj\Debug\net6.0\MenuSaz.Identity.Persistence.AssemblyInfo.cs
+D:\Project\MenuSaz.Identity\MenuSaz.Identity.Persistence\obj\Debug\net6.0\MenuSaz.Identity.Persistence.csproj.CoreCompileInputs.cache
+D:\Project\MenuSaz.Identity\MenuSaz.Identity.Persistence\obj\Debug\net6.0\MenuSaz.Identity.Persistence.csproj.CopyComplete
+D:\Project\MenuSaz.Identity\MenuSaz.Identity.Persistence\obj\Debug\net6.0\MenuSaz.Identity.Persistence.dll
+D:\Project\MenuSaz.Identity\MenuSaz.Identity.Persistence\obj\Debug\net6.0\refint\MenuSaz.Identity.Persistence.dll
+D:\Project\MenuSaz.Identity\MenuSaz.Identity.Persistence\obj\Debug\net6.0\MenuSaz.Identity.Persistence.pdb
+D:\Project\MenuSaz.Identity\MenuSaz.Identity.Persistence\obj\Debug\net6.0\MenuSaz.Identity.Persistence.genruntimeconfig.cache
+D:\Project\MenuSaz.Identity\MenuSaz.Identity.Persistence\obj\Debug\net6.0\ref\MenuSaz.Identity.Persistence.dll
