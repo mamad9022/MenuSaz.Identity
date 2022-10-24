@@ -3,8 +3,7 @@ using MenuSaz.Identity.Infrastructure.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace MenuSaz.Identity.Infrastructure
-{
+namespace MenuSaz.Identity.Infrastructure;
     public static class DI
     {
         public static void AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
@@ -12,4 +11,3 @@ namespace MenuSaz.Identity.Infrastructure
             services.AddScoped<IUserService, UserService>();
         }
     }
-}

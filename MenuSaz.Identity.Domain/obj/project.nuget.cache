@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Nm3QYGVfFrorfT9pbXEwkG8Oe3HFSyLHiXFVrJwybtX3qfa6thHUxY9CmyGDD2T1lw7bpMKnZhuiNkarENug2Q==",
+  "dgSpecHash": "rMxyezLZxb4UdhSek4Pq8LL2zR/5LKpC+D3ieptO/Y5hTsN0VTn4wduF0uPZfv1Jpf3ZLCpJXQTN7q8hnVKSvw==",
   "success": true,
-  "projectFilePath": "D:\\Project\\MenuSaz.Identity\\MenuSaz.Identity.Domain\\MenuSaz.Identity.Domain.csproj",
+  "projectFilePath": "D:\\Projects\\MenuSaz.Identity\\MenuSaz.Identity.Domain\\MenuSaz.Identity.Domain.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\mamad9022\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
-    "C:\\Users\\mamad9022\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
-    "C:\\Users\\mamad9022\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+    "C:\\Users\\m.ayieneh\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
+    "C:\\Users\\m.ayieneh\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
+    "C:\\Users\\m.ayieneh\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
   ],
   "logs": []
 }

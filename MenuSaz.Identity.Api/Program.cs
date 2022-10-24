@@ -1,5 +1,6 @@
 using MenuSaz.Identity.Application;
 using MenuSaz.Identity.Infrastructure;
+using MenuSaz.Identity.Infrastructure.Extensions;
 using MenuSaz.Identity.Persistence;
 using MenuSaz.Identity.Persistence.Context;
 
@@ -16,15 +17,9 @@ builder.Services.AddApplication(builder.Configuration);
 builder.Services.AddInfrastructure(builder.Configuration);
 
 var app = builder.Build();
-using (var serviceScope = app.Services.CreateScope())
-{
-    var serviceProvider = serviceScope.ServiceProvider;
 
-    using var context = serviceProvider.GetRequiredService<UserIdentityContext>();
+DbContextExtensions.Seed(app);
 
-    await context.Database.EnsureCreatedAsync();
-
-}
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

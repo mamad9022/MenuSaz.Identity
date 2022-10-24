@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MenuSaz.Identity.Application\MenuSaz.Identity.Application.csproj" />
+    <ProjectReference Include="..\MenuSaz.Identity.Infrastructure\MenuSaz.Identity.Infrastructure.csproj" />
     <ProjectReference Include="..\MenuSaz.Identity.Persistence\MenuSaz.Identity.Persistence.csproj" />
   </ItemGroup>
 
