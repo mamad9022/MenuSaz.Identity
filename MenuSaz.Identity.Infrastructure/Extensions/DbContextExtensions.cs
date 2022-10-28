@@ -38,6 +38,10 @@ public static class DbContextExtensions
         if (!context.Set<User>().Any())
         {
             var user = new User("test", "test", "test", "test", true);
+            user.AddRole(new List<Role>
+            {
+                new Role("user", true)
+            }, user);
             context.Add(user);
         }
     }

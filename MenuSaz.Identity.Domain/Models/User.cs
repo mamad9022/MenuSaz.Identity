@@ -20,13 +20,16 @@ namespace MenuSaz.Identity.Domain.Models
             IsActive = isActive;
         }
 
-        public void AddRole(List<Role> roles)
+        public void AddRole(List<Role> roles, User user)
         {
             if (roles is null) return;
-                _roles = roles;
+            foreach (var role in roles)
+            {
+                _userRoles = new List<UserRole> { new Models.UserRole(user.Id, user, role.Id, role) };
+            }
         }
 
-        private List<Role> _roles;
+        private List<UserRole> _userRoles;
 
         public string Username { get; private set; } = null!;
         public string Firstname { get; private set; } = null!;
@@ -34,6 +37,6 @@ namespace MenuSaz.Identity.Domain.Models
         public string Password { get; private set; } = null!;
         public long PhoneNumber { get; private set; }
         public bool IsActive { get; private set; }
-        public List<Role> Role => _roles;
+        public List<UserRole> UserRole => _userRoles;
     }
 }
