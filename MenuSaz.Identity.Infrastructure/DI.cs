@@ -1,13 +1,15 @@
-﻿using MenuSaz.Identity.Application.Services;
-using MenuSaz.Identity.Infrastructure.Services;
+﻿using MenuSaz.Identity.Application.Repositories;
+using MenuSaz.Identity.Application.UnitOfWork;
+using MenuSaz.Identity.Infrastructure.Repository;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace MenuSaz.Identity.Infrastructure;
-    public static class DI
+public static class DI
+{
+    public static void AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {
-        public static void AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
-        {
-            services.AddScoped<IUserService, UserService>();
-        }
+        services.AddScoped<IUserRepository, UserRepository>();
+        services.AddTransient<IUnitOfWork, UnitOfWork.UnitOfWork>();
     }
+}

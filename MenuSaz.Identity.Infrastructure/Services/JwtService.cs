@@ -26,7 +26,7 @@ namespace MenuSaz.Identity.Infrastructure.Services
                 Subject = new ClaimsIdentity(new[]
                 {
                     new Claim("userId", user.Id.ToString()),
-                    new Claim("roles", JsonConvert.SerializeObject(user.Role)),
+                    new Claim("roles", JsonConvert.SerializeObject(user.UserRole.Select(x=>x.Role))),
                     new Claim("phoneNumber", user.PhoneNumber.ToString())
                 }),
                 Expires = DateTime.UtcNow.AddMinutes(30),
