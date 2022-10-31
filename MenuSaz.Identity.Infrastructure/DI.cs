@@ -10,6 +10,7 @@ public static class DI
     public static void AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddScoped<IUserRepository, UserRepository>();
+        services.AddScoped<IUserRoleRepository, UserRoleRepository>();
         services.AddTransient<IUnitOfWork, UnitOfWork.UnitOfWork>();
     }
 }

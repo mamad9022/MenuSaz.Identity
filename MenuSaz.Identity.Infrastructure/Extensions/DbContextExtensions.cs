@@ -1,13 +1,12 @@
 ﻿using MenuSaz.Identity.Domain.Models;
 using MenuSaz.Identity.Persistence.Context;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace MenuSaz.Identity.Infrastructure.Extensions;
 public static class DbContextExtensions
 {
-    public static void Seed(IApplicationBuilder app)
+    public static async void Seed(IApplicationBuilder app)
     {
 
         using (var serviceScope = app.ApplicationServices.CreateScope())
@@ -18,22 +17,22 @@ public static class DbContextExtensions
             {
                 context.Database.EnsureCreated();
 
-                context.AddRole();
-                context.AddUser();
+                await context.AddRole();
+                await context.AddUser();
 
-                context.SaveChanges();
+                await context.SaveChangesAsync();
                 context.Dispose();
             }
 
         }
     }
 
-    private static void AddRole(this UserIdentityContext context)
+    private static async Task AddRole(this UserIdentityContext context)
     {
         if (!context.Set<Role>().Any())
-            context.AddRange(new Role("user", true));
+            await context.AddRangeAsync(new Role("user", true));
     }
-    private static void AddUser(this UserIdentityContext context)
+    private static async Task AddUser(this UserIdentityContext context)
     {
         if (!context.Set<User>().Any())
         {
@@ -42,7 +41,7 @@ public static class DbContextExtensions
             {
                 new Role("user", true)
             }, user);
-            context.Add(user);
+            await context.AddAsync(user);
         }
     }
 }

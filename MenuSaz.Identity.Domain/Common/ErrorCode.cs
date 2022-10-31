@@ -6,6 +6,8 @@
 
         NotFound = 4041,
 
+        Duplicated = 405,
+
         //UndefinedService = 4042,
 
         //ThirdPartyServiceNotFound = 4043,

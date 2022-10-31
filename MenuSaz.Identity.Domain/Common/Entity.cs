@@ -8,8 +8,8 @@ public abstract class Entity<T> where T : IEquatable<T>
     public T Id { get; }
     public byte[] Version { get; set; }
     public bool IsDeleted { get; set; }
-    public DateTimeOffset CreatedAt { get; set; } = DateTimeOffset.UtcNow.LocalDateTime;
-    public DateTimeOffset? ModifiedAt { get; set; } = DateTimeOffset.UtcNow.LocalDateTime;
+    public DateTimeOffset CreatedAt { get; set; }
+    public DateTimeOffset? ModifiedAt { get; set; }
     
     public List<INotification> DomainEvents => _domainEvents;
 

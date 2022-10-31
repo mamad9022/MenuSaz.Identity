@@ -4,5 +4,7 @@
     {
         public string UnAuthorize = "UnAuthorize";
         public string NotFound = "NotFound";
+        public string Duplicated = "Duplicated";
+        public string UnknownServerError = "UnknownServerError";
     }
 }

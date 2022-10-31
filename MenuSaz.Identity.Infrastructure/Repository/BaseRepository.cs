@@ -68,7 +68,6 @@ namespace MenuSaz.Identity.Infrastructure.Repository
             return await GetAsync(predicate, orderBy, null, pageNumber * pageSize, pageSize);
         }
 
-
         public async Task<IReadOnlyList<T>> GetAsync(Expression<Func<T, bool>>? predicate = null,
             Func<IQueryable<T>, IOrderedQueryable<T>>? orderBy = null,
             List<Expression<Func<T, object?>>>? includes = null,
@@ -96,6 +95,11 @@ namespace MenuSaz.Identity.Infrastructure.Repository
         {
             _dbContext.Entry(entity).State = EntityState.Modified;
             return Task.CompletedTask;
+        }
+
+        public async Task<bool> AnyAsync(Expression<Func<T, bool>> predicate)
+        {
+            return await _dbContext.Set<T>().AnyAsync(predicate);
         }
     }
 }

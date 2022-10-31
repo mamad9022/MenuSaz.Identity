@@ -1,5 +1,6 @@
 ﻿using MenuSaz.Identity.Application.Configuration;
 using MenuSaz.Identity.Application.Services;
+using MenuSaz.Identity.Application.UnitOfWork;
 using MenuSaz.Identity.Domain.Models;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
@@ -13,9 +14,11 @@ namespace MenuSaz.Identity.Infrastructure.Services
     public class JwtService : IJwtService
     {
         private readonly AppSettings _appSettings;
-        public JwtService(IOptions<AppSettings> options)
+        private readonly IUnitOfWork _unitOfWork;
+        public JwtService(IOptions<AppSettings> options, IUnitOfWork unitOfWork)
         {
             _appSettings = options.Value;
+            _unitOfWork = unitOfWork;
         }
         public async Task<string> GenerateJwtToken(User user)
         {
@@ -26,7 +29,7 @@ namespace MenuSaz.Identity.Infrastructure.Services
                 Subject = new ClaimsIdentity(new[]
                 {
                     new Claim("userId", user.Id.ToString()),
-                    new Claim("roles", JsonConvert.SerializeObject(user.UserRole.Select(x=>x.Role))),
+                    new Claim("roles", JsonConvert.SerializeObject(GetUserRolesAsync(user.Id))),
                     new Claim("phoneNumber", user.PhoneNumber.ToString())
                 }),
                 Expires = DateTime.UtcNow.AddMinutes(30),
@@ -34,6 +37,12 @@ namespace MenuSaz.Identity.Infrastructure.Services
             };
             var token = Task.FromResult(tokenHandler.CreateToken(tokenDescriptor));
             return tokenHandler.WriteToken(await token);
+        }
+
+        private async Task<IReadOnlyList<Role>> GetUserRolesAsync(long userId)
+        {
+            var userRoles = await _unitOfWork.UserRole.GetAsync(x => x.UserId == userId);
+            return userRoles.Select(x => x.Role).ToList();
         }
 
         public async Task<bool> ValidateJwtToken(string token)
