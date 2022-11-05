@@ -1,6 +1,6 @@
-﻿using MenuSaz.Identity.Application.Feature.User.Command;
+﻿using MediatR;
+using MenuSaz.Identity.Application.Feature.User.Command;
 using MenuSaz.Identity.Application.Feature.User.Dtos;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MenuSaz.Identity.Api.Controllers;
@@ -9,5 +9,16 @@ namespace MenuSaz.Identity.Api.Controllers;
 [ApiController]
 public class UserController : ControllerBase
 {
-   
+    private readonly IMediator _mediator;
+    public UserController(IMediator mediator)
+    {
+        _mediator = mediator;
+    }
+
+    [HttpPost]
+    [Route("Register")]
+    public async Task<UserDto> Register(RegisterCommand command)
+    {
+        return await _mediator.Send(command);
+    }
 }

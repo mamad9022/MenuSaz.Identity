@@ -11,8 +11,7 @@ public static class ResponseExtension
         var data = JsonConvert.DeserializeObject<Resources>(jsonData);
         if (data == null)
             return "خطای ناشناخته سمت سرور";
-
-        var message = data.Data.FirstOrDefault(x => x.Key == responseMessage.Invoke(null));
+        var message = data.Data.FirstOrDefault(x => x.Key == responseMessage(new ResponseMessage()));
         return message?.Template;
     }
 }

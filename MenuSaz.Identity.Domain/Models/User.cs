@@ -11,12 +11,13 @@ namespace MenuSaz.Identity.Domain.Models
 
         }
 
-        public User(string username, string firstname, string lastname, string password, bool isActive)
+        public User(string username, string firstname, string lastname, string password, long phoneNumber, bool isActive)
         {
             Username = username;
             Firstname = firstname;
             Lastname = lastname;
             Password = password;
+            PhoneNumber = phoneNumber;
             IsActive = isActive;
         }
 

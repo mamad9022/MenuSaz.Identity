@@ -25,11 +25,3 @@ public class EnvelopFillter : IActionFilter
         }
     }
 }
-
-public static class EnvelopFillterExtensions
-{
-    public static IApplicationBuilder UseEnvelopFillter(this IApplicationBuilder builder)
-    {
-        return builder.UseMiddleware<EnvelopFillter>();
-    }
-}

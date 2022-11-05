@@ -4,7 +4,7 @@
     {
         Successful = 2001,
 
-        NotFound = 4041,
+        NotFound = 404,
 
         Duplicated = 405,
 

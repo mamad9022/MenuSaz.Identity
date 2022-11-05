@@ -36,7 +36,7 @@ public static class DbContextExtensions
     {
         if (!context.Set<User>().Any())
         {
-            var user = new User("test", "test", "test", "test", true);
+            var user = new User("test", "test", "test", "test", 9036139022, true);
             user.AddRole(new List<Role>
             {
                 new Role("user", true)

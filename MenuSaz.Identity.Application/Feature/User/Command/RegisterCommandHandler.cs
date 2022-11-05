@@ -26,6 +26,7 @@ namespace MenuSaz.Identity.Application.Feature.User.Command
                 request.Firstname,
                 request.Lastname,
                 BCrypt.Net.BCrypt.HashPassword(request.Password),
+                request.Phonenumber,
                 false);
 
             await _unitOfWork.User.AddAsync(user);

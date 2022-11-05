@@ -47,8 +47,6 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
-app.UseEnvelopFillter();
-
 app.UseExceptionMiddleware();
 
 app.MapControllers();

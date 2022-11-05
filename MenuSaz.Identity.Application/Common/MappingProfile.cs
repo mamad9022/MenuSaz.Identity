@@ -13,7 +13,7 @@ namespace MenuSaz.Identity.Application.Common
                 .ForMember(t => t.Lastname, opt => opt.MapFrom(c => c.Lastname))
                 .ForMember(t => t.Username, opt => opt.MapFrom(c => c.Username))
                 .ForMember(t => t.PhoneNumber, opt => opt.MapFrom(c => c.PhoneNumber))
-                .ForMember(t => t.IsActive, opt => opt.MapFrom(c => c.IsActive))
+                .ForMember(t => t.IsActive, opt => opt.MapFrom(c => c.IsActive));
         }
     }
 }
