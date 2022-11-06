@@ -3,6 +3,18 @@
     {
       "Key": "PersonNotFound",
       "Template": "فرد مورد نظر شما پیدا نشد"
+    },
+    {
+      "Key": "Duplicated",
+      "Template": "نام کاربری تکراری می باشد"
+    },
+    {
+      "Key": "UsernameNotValid",
+      "Template": "نام کاربری مجاز نمی باشد"
+    },
+    {
+      "Key": "PasswordWrong",
+      "Template": "رمز عبور اشتبه می باشد"
     }
   ]
 }

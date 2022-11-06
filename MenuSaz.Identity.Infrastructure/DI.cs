@@ -1,6 +1,8 @@
 ﻿using MenuSaz.Identity.Application.Repositories;
+using MenuSaz.Identity.Application.Services;
 using MenuSaz.Identity.Application.UnitOfWork;
 using MenuSaz.Identity.Infrastructure.Repository;
+using MenuSaz.Identity.Infrastructure.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -11,6 +13,7 @@ public static class DI
     {
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IUserRoleRepository, UserRoleRepository>();
+        services.AddScoped<IJwtService, JwtService>();
         services.AddTransient<IUnitOfWork, UnitOfWork.UnitOfWork>();
     }
 }
