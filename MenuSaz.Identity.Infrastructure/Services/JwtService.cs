@@ -20,19 +20,20 @@ public class JwtService : IJwtService
         _appSettings = options.Value;
         _unitOfWork = unitOfWork;
     }
-
     public async Task<string> GenerateJwtToken(User user)
     {
         var tokenHandler = new JwtSecurityTokenHandler();
         var key = Encoding.ASCII.GetBytes(_appSettings.Secret);
-        var t = await GetUserRolesAsync(user.Id);
         var tokenDescriptor = new SecurityTokenDescriptor
         {
             Subject = new ClaimsIdentity(new[]
             {
                     new Claim("userId", user.Id.ToString()),
                     new Claim("roles", JsonConvert.SerializeObject(await GetUserRolesAsync(user.Id))),
-                    new Claim("phoneNumber", user.PhoneNumber.ToString())
+                    new Claim("phonenumber", user.PhoneNumber.ToString()),
+                    new Claim("username", user.Username),
+                    new Claim("firstname", user.Firstname),
+                    new Claim("lastname", user.Lastname)
                 }),
             Expires = DateTime.UtcNow.AddMinutes(30),
             SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
