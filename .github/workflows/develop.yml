@@ -2,16 +2,14 @@ name: CI-dev-pipeline
 on:
   # Triggers the workflow on push or pull request events but only for the develop branch
  push:
-    branches: [ develop ]
+      branches: [ "main" ]
   pull_request:
-    branches: [ develop ]
+    branches: [ "main" ]
 
 jobs:
   build:
     # The type of runner that the job will run on
-    runs-on: windows-latest
-    container:
-      image: lucasalt/act_base:latest
+       runs-on: ubuntu-latest
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
