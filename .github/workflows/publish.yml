@@ -1,8 +1,9 @@
 name: CI-dev-pipeline
 on:
   # Triggers the workflow on push or pull request events but only for the develop branch
- push:
-    branches: [ "main" ]
+   push:
+    tags:
+      - "v*"
 
 jobs:
   build:
@@ -11,4 +12,4 @@ jobs:
     steps:
         - uses: actions/checkout@v2
         - name: Build docker
-          run: docker-compose up -d
+          run: docker-compose up --build
