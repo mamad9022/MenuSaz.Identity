@@ -20,6 +20,8 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 6.0.x
+    - name: Restore dependencies
+      run: dotnet restore ".\src\MenuSaz.Identity.Api\MenuSaz.Identity.Api.csproj"
     - name: Build
       run: dotnet build ".\src\MenuSaz.Identity.Api\MenuSaz.Identity.Api.csproj" --no-restore
     - name: Test
