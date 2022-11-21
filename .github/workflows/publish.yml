@@ -11,4 +11,4 @@ jobs:
     steps:
     - name: Build docker
       run: | 
-         docker-compose -f ./<REPO_NAME>/docker-compose.yml -p testing up -d
+         docker-compose up -d
