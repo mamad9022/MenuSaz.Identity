@@ -3,17 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{65C5744B-C910-40DA-BE98-24B970C4F815}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{65C5744B-C910-40DA-BE98-24B970C4F815}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MenuSaz.Identity.Domain", "MenuSaz.Identity.Domain\MenuSaz.Identity.Domain.csproj", "{3D18B68C-20D9-4BBE-84B7-63F0AF1F22AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MenuSaz.Identity.Domain", "src\MenuSaz.Identity.Domain\MenuSaz.Identity.Domain.csproj", "{3D18B68C-20D9-4BBE-84B7-63F0AF1F22AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MenuSaz.Identity.Persistence", "MenuSaz.Identity.Persistence\MenuSaz.Identity.Persistence.csproj", "{8D0A5BBD-74D7-427D-AF21-1CA4F3094F5A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MenuSaz.Identity.Persistence", "src\MenuSaz.Identity.Persistence\MenuSaz.Identity.Persistence.csproj", "{8D0A5BBD-74D7-427D-AF21-1CA4F3094F5A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MenuSaz.Identity.Application", "MenuSaz.Identity.Application\MenuSaz.Identity.Application.csproj", "{89A61041-5862-43EC-AAED-FBE3D06480D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MenuSaz.Identity.Application", "src\MenuSaz.Identity.Application\MenuSaz.Identity.Application.csproj", "{89A61041-5862-43EC-AAED-FBE3D06480D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MenuSaz.Identity.Infrastructure", "MenuSaz.Identity.Infrastructure\MenuSaz.Identity.Infrastructure.csproj", "{16A9BA6B-A312-4308-8291-059636148634}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MenuSaz.Identity.Infrastructure", "src\MenuSaz.Identity.Infrastructure\MenuSaz.Identity.Infrastructure.csproj", "{16A9BA6B-A312-4308-8291-059636148634}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MenuSaz.Identity.Api", "MenuSaz.Identity.Api\MenuSaz.Identity.Api.csproj", "{37B9D824-6607-4E24-98A9-042E4D13093A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MenuSaz.Identity.Api", "src\MenuSaz.Identity.Api\MenuSaz.Identity.Api.csproj", "{37B9D824-6607-4E24-98A9-042E4D13093A}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{1CED19EE-8079-463C-966C-7BD9DEC8941F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{37B9D824-6607-4E24-98A9-042E4D13093A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37B9D824-6607-4E24-98A9-042E4D13093A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37B9D824-6607-4E24-98A9-042E4D13093A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CED19EE-8079-463C-966C-7BD9DEC8941F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CED19EE-8079-463C-966C-7BD9DEC8941F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CED19EE-8079-463C-966C-7BD9DEC8941F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CED19EE-8079-463C-966C-7BD9DEC8941F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
