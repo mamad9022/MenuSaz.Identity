@@ -11,4 +11,4 @@ jobs:
     steps:
     - name: Build docker
       run: | 
-         docker-compose -f ./<REPO_NAME>/docker-compose.yml
+         docker-compose -f ./blob/main/docker-compose.yml
