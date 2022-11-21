@@ -27,4 +27,4 @@ jobs:
     - name: Test
       run: dotnet test ".\src\MenuSaz.Identity.Api\MenuSaz.Identity.Api.csproj" --no-build --verbosity normal
     - name: Publish
-      run: dotnet publish ".\src\MenuSaz.Identity.Api\MenuSaz.Identity.Api.csproj" --configuration FolderProfile-winx64 --output $GITHUB_WORKSPACE/distwww --no-restore
+      run: dotnet publish ".\src\MenuSaz.Identity.Api\MenuSaz.Identity.Api.csproj" --configuration FolderProfile-winx64 --output ./bin/publish --no-restore
