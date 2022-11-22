@@ -1,30 +1,52 @@
-# This workflow will build a .NET project
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
-
-name: .NET
+name: "Publish"
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    tags:
+      - "v*"
+
+env:
+  PROJECT_PATH: src/MenuSaz.Identity.Api/MenuSaz.Identity.Api.csproj
+  ZIP_PATH: src/MenuSaz.Identity.Api/bin/Release/net6.0-windows/win-x64/publish/MenuSaz.Identity.Api-x64.zip
+  EXE_PATH: src/MenuSaz.Identity.Api/bin/Release/net6.0-windows/win-x64/publish/MenuSaz.Identity.Api.exe
+
 
 jobs:
-  build:
-
-    runs-on: ubuntu-latest
-
+  deploy:
+    runs-on: windows-latest
     steps:
-    - uses: actions/checkout@v3
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v3
-      with:
-        dotnet-version: 6.0.x
-    - name: Restore dependencies
-      run: dotnet restore ".\src\MenuSaz.Identity.Api\MenuSaz.Identity.Api.csproj"
-    - name: Build
-      run: dotnet build ".\src\MenuSaz.Identity.Api\MenuSaz.Identity.Api.csproj" --no-restore
-    - name: Test
-      run: dotnet test ".\src\MenuSaz.Identity.Api\MenuSaz.Identity.Api.csproj" --no-build --verbosity normal
-    - name: Publish
-      run: dotnet publish ".\src\MenuSaz.Identity.Api\MenuSaz.Identity.Api.csproj" -c Release -o app
+      - name: Initialize Actions
+        uses: actions/checkout@v2
+
+      - name: Initialize .Net
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 5.0.x
+
+      - name: Restore Project
+        run: dotnet restore ${{ env.PROJECT_PATH }}
+
+      - name: Publish Project
+        run: dotnet publish ${{ env.PROJECT_PATH }} -c Release --self-contained -r win-x86 --no-restore
+
+      - name: Create Zip File
+        uses: papeloto/action-zip@v1
+        with:
+          files: ${{ env.EXE_PATH }}
+          dest: ${{ env.ZIP_PATH }}
+
+      - name: Initialize Release
+        uses: actions/create-release@v1
+        id: create_release
+        env:
+          GITHUB_TOKEN: ${{ secrets.SECRET_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: ${{ github.ref }}
+
+      - name: Create Release
+        uses: csexton/release-asset-action@v2
+        with:
+          github-token: ${{ secrets.SECRET_TOKEN }}
+          file: ${{ env.ZIP_PATH }}
+          release-url: ${{ steps.create_release.outputs.upload_url }}
