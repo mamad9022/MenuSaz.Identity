@@ -5,9 +5,9 @@ on:
    branches:
       - main
 env:
-  PROJECT_PATH: ./src/MenuSaz.Identity.Api/MenuSaz.Identity.Api.csproj
-  ZIP_PATH: ./src/MenuSaz.Identity.Api/bin/Release/net6.0-windows/win-x86/publish/MenuSaz.Identity.Api-x86.zip
-  EXE_PATH: ./src/MenuSaz.Identity.Api/bin/Release/net6.0-windows/win-x86/publish/MenuSaz.Identity.Api.exe
+  PROJECT_PATH: /src/MenuSaz.Identity.Api/MenuSaz.Identity.Api.csproj
+  ZIP_PATH: /src/MenuSaz.Identity.Api/bin/Release/net6.0-windows/win-x86/publish/MenuSaz.Identity.Api-x86.zip
+  EXE_PATH: /src/MenuSaz.Identity.Api/bin/Release/net6.0-windows/win-x86/publish/MenuSaz.Identity.Api.exe
 
 
 jobs:
