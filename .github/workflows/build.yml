@@ -28,18 +28,6 @@ jobs:
       run: dotnet test ".\src\MenuSaz.Identity.Api\MenuSaz.Identity.Api.csproj" --no-build --verbosity normal
     - name: Publish
       run: dotnet publish ".\src\MenuSaz.Identity.Api\MenuSaz.Identity.Api.csproj" -c Release -o app
-    - name: Upload artifact
-    - name: Step 1 - Create a temporary artifact downloads folder
-        run: mkdir downloads
-        
-      - name: step 2 - Add artifacts to publish to the temp folder
-        run: |
-          cd downloads
-          echo 'alpha'    > alpha.html
-          echo 'bravo'    > bravo.html
-          echo 'charlie'  > charlie.html
-          cd ..
-    
       - name: Step 3 - Use the Upload Artifact GitHub Action
         uses: actions/upload-artifact@v2
         with: 
