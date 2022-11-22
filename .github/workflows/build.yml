@@ -27,4 +27,6 @@ jobs:
     - name: Test
       run: dotnet test ".\src\MenuSaz.Identity.Api\MenuSaz.Identity.Api.csproj" --no-build --verbosity normal
     - name: Publish
-      run: dotnet publish Release ".\src\MenuSaz.Identity.Api\MenuSaz.Identity.Api.csproj" --configuration FolderProfile-winx64 --output ./bin/publish --no-restore
+      run: dotnet publish ".\src\MenuSaz.Identity.Api\MenuSaz.Identity.Api.csproj" -c Release -o app
+            7z a -tzip "app.zip" "./app/*"
+            rm -r app
