@@ -28,3 +28,8 @@ jobs:
       run: dotnet test ".\src\MenuSaz.Identity.Api\MenuSaz.Identity.Api.csproj" --no-build --verbosity normal
     - name: Publish
       run: dotnet publish ".\src\MenuSaz.Identity.Api\MenuSaz.Identity.Api.csproj" -c Release -o app
+    - name: Upload artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: surefire-reports
+        path: mymeeave/target/surefire-reports/**
