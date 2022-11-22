@@ -6,9 +6,9 @@ on:
       - "v*"
 
 env:
-  PROJECT_PATH: src/MenuSaz.Identity.Api/MenuSaz.Identity.Api.csproj
-  ZIP_PATH: src/MenuSaz.Identity.Api/bin/Release/net6.0-windows/win-x64/publish/MenuSaz.Identity.Api-x64.zip
-  EXE_PATH: src/MenuSaz.Identity.Api/bin/Release/net6.0-windows/win-x64/publish/MenuSaz.Identity.Api.exe
+  PROJECT_PATH: ./src/MenuSaz.Identity.Api/MenuSaz.Identity.Api.csproj
+  ZIP_PATH: ./src/MenuSaz.Identity.Api/bin/Release/net6.0-windows/win-x64/publish/MenuSaz.Identity.Api-x64.zip
+  EXE_PATH: ./src/MenuSaz.Identity.Api/bin/Release/net6.0-windows/win-x64/publish/MenuSaz.Identity.Api.exe
 
 
 jobs:
