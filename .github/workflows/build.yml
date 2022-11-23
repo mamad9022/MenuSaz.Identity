@@ -37,6 +37,8 @@ jobs:
       - name: Initialize Release
         uses: actions/create-release@v1
         id: create_release
+        env:
+          GITHUB_TOKEN: ${{ secrets.SECRET_TOKEN }}
         with:
           tag_name: ${{ github.ref }}
           release_name: ${{ github.ref }}
@@ -44,5 +46,6 @@ jobs:
       - name: Create Release
         uses: csexton/release-asset-action@v2
         with:
+          github-token: ${{ secrets.SECRET_TOKEN }}
           file: ${{ env.ZIP_PATH }}
           release-url: ${{ steps.create_release.outputs.upload_url }}
